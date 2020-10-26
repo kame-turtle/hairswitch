@@ -1,0 +1,26 @@
+@import "breakpoints/base";
+
+@media (min-width: 480px) {     //スマホのランドスケープ用（スマホの横向き）
+  @import "breakpoints/480up";  //アンダースコアはモジュールであることを明示する目的でついてるのでpathには記載不要。拡張子も記載不要。
+}
+
+@media (min-width: 600px) {     //タブレット用
+  @import "breakpoints/600up";
+}
+
+@media (min-width: 960px) {     //タブレット用のランドスケープ用（タブレット横向き）またはラップトップ用
+  @import "breakpoints/960up";
+}
+
+@media (min-width: 1280px) {     //PCディスプレイ用
+  @import "breakpoints/1280up";
+}
+
+@media (min-resolution: 192dpi), //Retinaディスプレイ用
+(-webkit-min-device-pixcel-ratio: 2) {
+  @import "breakpoints/2x";
+}
+
+@media print {                   //印刷用
+  @import "breakpoints/print";
+}
