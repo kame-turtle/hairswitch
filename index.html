@@ -1,16 +1,39 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>hairswitch</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 600px)">
-  <link rel="stylesheet" href="desktop.css" media="screen and (min-width: 601px)">
-</head>
-<body>
-  <header>
-    <h1>hairswitch 那覇市新都心の美容室</h1>
-  </header>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hairswitch</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="swiper.css" />
+  </head>
+  <body>
+    <header>
+      <h1>hairswitch 那覇市新都心の美容室</h1>
+    </header>
+
+    <!-- slider section ~swiper.js~ -->
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <!-- slide images -->
+        <div class="swiper-slide"><img src="images/model01.jpg" alt="" /></div>
+        <div class="swiper-slide"><img src="images/model02.jpg" alt="" /></div>
+        <div class="swiper-slide"><img src="images/model03.jpg" alt="" /></div>
+        <div class="swiper-slide"><img src="images/model04.jpg" alt="" /></div>
+        <div class="swiper-slide"><img src="images/model05.jpg" alt="" /></div>
+      </div>
+      <div class="swiper-pagination"></div>
+
+      <!-- nav button -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+      <!-- scroll bar -->
+      <div class="swiper-scrollbar"></div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="swiper.js"></script>
+  </body>
 </html>
