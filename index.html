@@ -4,36 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>hairswitch</title>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="swiper.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/swiper.css" />
   </head>
   <body>
-    <header>
-      <h1>hairswitch 那覇市新都心の美容室</h1>
-    </header>
+    <div class="swiper">
+      <!-- Slider main container -->
+      <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <img src="images/model01.jpg" class="swiper__img">
+          </div>
+          <div class="swiper-slide">
+            <img src="images/model02.jpg" class="swiper__img">
+          </div>
+          <div class="swiper-slide">
+            <img src="images/model06.jpg" class="swiper__img">
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
 
-    <!-- slider section ~swiper.js~ -->
-    <div class="swiper-container">
-      <div class="swiper-wrapper">
-        <!-- slide images -->
-        <div class="swiper-slide"><img src="images/model01.jpg" alt="" /></div>
-        <div class="swiper-slide"><img src="images/model02.jpg" alt="" /></div>
-        <div class="swiper-slide"><img src="images/model03.jpg" alt="" /></div>
-        <div class="swiper-slide"><img src="images/model04.jpg" alt="" /></div>
-        <div class="swiper-slide"><img src="images/model05.jpg" alt="" /></div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
       </div>
-      <div class="swiper-pagination"></div>
-
-      <!-- nav button -->
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-
-      <!-- scroll bar -->
-      <div class="swiper-scrollbar"></div>
     </div>
-
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="swiper.js"></script>
+    <script src="scripts/librarys/swiper.js"></script>
   </body>
 </html>
