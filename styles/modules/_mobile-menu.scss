@@ -1,0 +1,20 @@
+.mobile-menu {
+  .logo {
+    height: 36px;
+    margin-bottom: 15px;
+    &__title {
+      font-size: 36px;
+      padding: 0 40px;
+    }
+  }
+
+  &__item {
+    list-style: none;
+  }
+  &__link {
+    .main-title {
+      display: inline-block;
+      width: 100px;
+    }
+  }
+}

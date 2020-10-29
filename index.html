@@ -4,26 +4,64 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>hairswitch</title>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@400;700&family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/vendors/bootstrap-reboot.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@400;700&family=M+PLUS+Rounded+1c&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/vendors/bootstrap-reboot.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="styles/swiper.css" />
   </head>
   <body>
-    <h1>sample text</h1>
-    <h1>サンプルテキスト</h1>
+    <header class="header">
+      <nav class="mobile-menu">
+        <div class="logo">
+          <span class="logo__title">hairswitch</span>
+        </div>
+        <ul class="mobile-menu__main">
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="#">
+              <span class="main-title">Menu</span>
+              <span class="sub-title">メニュー</span>
+            </a>
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="#">
+              <span class="main-title">About Us</span>
+              <span class="sub-title">hairswitchについて</span>
+            </a>
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="#">
+              <span class="main-title">Contact Us</span>
+              <span class="sub-title">ご連絡方法</span>
+            </a>
+          </li>
+        </ul>
+        <button class="mobile-menu__btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </header>
+
+    <!-- スライダーセクション -->
     <div class="swiper">
       <div class="swiper-container">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <img src="images/model01.jpg" class="swiper__img">
+            <img src="images/model01.jpg" class="swiper__img" />
           </div>
           <div class="swiper-slide">
-            <img src="images/model02.jpg" class="swiper__img">
+            <img src="images/model02.jpg" class="swiper__img" />
           </div>
           <div class="swiper-slide">
-            <img src="images/model06.jpg" class="swiper__img">
+            <img src="images/model06.jpg" class="swiper__img" />
           </div>
         </div>
         <div class="swiper-pagination"></div>

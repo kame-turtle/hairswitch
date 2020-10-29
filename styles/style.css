@@ -20,6 +20,25 @@
   margin: 0 auto;
 }
 
+.mobile-menu .logo {
+  height: 36px;
+  margin-bottom: 15px;
+}
+
+.mobile-menu .logo__title {
+  font-size: 36px;
+  padding: 0 40px;
+}
+
+.mobile-menu__item {
+  list-style: none;
+}
+
+.mobile-menu__link .main-title {
+  display: inline-block;
+  width: 100px;
+}
+
 /******************************************************************
 
 Stylesheet: ベーススタイル
