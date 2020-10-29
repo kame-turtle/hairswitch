@@ -2,4 +2,31 @@
 
 Stylesheet: 960px以上のモニタで適用
 
+pc用（ラップトップ以上）のスタイル定義！
+pc用（ラップトップ以上）のスタイル定義！！
+pc用（ラップトップ以上）のスタイル定義！！！
+
 ******************************************************************/
+// フォント専用クラス
+.font-sm {
+  font-size: 16px;  //small size
+}
+.font-md {
+  font-size: 19px;  //middle size
+}
+.font-lr {
+  font-size: 23px;  //larger size
+}
+.font-lg {
+  font-size: 36px;  //large size
+}
+
+// margin専用クラス
+.mb-lg {
+  margin-bottom: 96px;
+}
+
+// padding専用クラス
+.pb-lg {
+  padding-bottom: 96px;
+}

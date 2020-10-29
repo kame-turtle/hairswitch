@@ -24,10 +24,52 @@
 
 Stylesheet: ベーススタイル
 
+※基本的にスマホ用のスタイルを定義！
+※基本的にスマホ用のスタイルを定義！！
+※基本的にスマホ用のスタイルを定義！！！
+
 ******************************************************************/
 body {
   font-family: 'M PLUS Rounded 1c', sans-serif;
   font-family: 'Josefin Slab', serif;
+}
+
+.font-sm {
+  font-size: 14px;
+}
+
+.font-md {
+  font-size: 17px;
+}
+
+.font-lr {
+  font-size: 17px;
+}
+
+.font-lg {
+  font-size: 25px;
+}
+
+.mb-sm {
+  margin-bottom: 16px;
+}
+
+.mb-lg {
+  margin-bottom: 48px;
+}
+
+.pb-sm {
+  padding-bottom: 16px;
+}
+
+.pb-lg {
+  padding-bottom: 48px;
+}
+
+.content-width {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1024px;
 }
 
 @media (min-width: 480px) {
@@ -51,7 +93,29 @@ Stylesheet: 600px以上のタブレットやモニタで適用
 
 Stylesheet: 960px以上のモニタで適用
 
+pc用（ラップトップ以上）のスタイル定義！
+pc用（ラップトップ以上）のスタイル定義！！
+pc用（ラップトップ以上）のスタイル定義！！！
+
 ******************************************************************/
+  .font-sm {
+    font-size: 16px;
+  }
+  .font-md {
+    font-size: 19px;
+  }
+  .font-lr {
+    font-size: 23px;
+  }
+  .font-lg {
+    font-size: 36px;
+  }
+  .mb-lg {
+    margin-bottom: 96px;
+  }
+  .pb-lg {
+    padding-bottom: 96px;
+  }
 }
 
 @media (min-width: 1280px) {
