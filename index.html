@@ -17,8 +17,19 @@
     <link rel="stylesheet" href="styles/swiper.css" />
   </head>
   <body>
+
     <header class="header">
       <nav class="mobile-menu">
+        <div class="mobile-menu__btn">
+          <!-- ↓↓メニュー開閉の状態管理用要素↓↓ -->
+          <input id="menu" type="checkbox"/>
+          <label for="menu" class="open">🍔</label>
+          <!-- ↓↓全画面マスク(メニュー閉用クリック要素)↓↓ -->
+          <label for="menu" class="back"></label>
+          <!-- ↓↓ ×ボタン用要素 ↓↓ -->
+          <label for="menu" class="close">×close</label>
+        </div>
+
         <div class="logo">
           <span class="logo__title">hairswitch</span>
         </div>
@@ -42,11 +53,6 @@
             </a>
           </li>
         </ul>
-        <button class="mobile-menu__btn">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
       </nav>
     </header>
 
