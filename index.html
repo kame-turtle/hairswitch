@@ -18,56 +18,59 @@
   </head>
   <body>
 
+<!-- ------------------------- ヘッダー -------------------------- -->
     <header class="header">
-      <nav class="mobile-menu">
-        <div class="mobile-menu__btn">
-          <!-- ↓↓メニュー開閉の状態管理用要素↓↓ -->
-          <input id="menu" type="checkbox"/>
-          <label for="menu" class="open">🍔</label>
-          <!-- ↓↓全画面マスク(メニュー閉用クリック要素)↓↓ -->
-          <label for="menu" class="back"></label>
-          <!-- ↓↓ ×ボタン用要素 ↓↓ -->
-          <label for="menu" class="close">×close</label>
-        </div>
+      <nav id="nav-drawer">
+        <!-- 表示状態管理用.チェックボックス自体は常に非表示 -->
+        <input id="nav-input" type="checkbox" class="nav-unshown" />
 
-        <div class="logo">
-          <span class="logo__title">hairswitch</span>
+        <!-- 初期表示のハンバーガーアイコン用 -->
+        <label id="nav-open" for="nav-input"><span></span></label>
+
+        <!-- 初期は非表示.inputチェック時は画面マスク,画面マスクをタップするとinputのチェック解除. -->
+        <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+
+        <!-- ドロワーの中身.inputのチェック有で表示,無しで非表示 -->
+        <div id="nav-content">
+          <div class="logo">
+            <span class="logo__title">hairswitch</span>
+          </div>
+          <ul class="mobile-menu__main">
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__link" href="#">
+                <span class="main-title">Menu</span>
+                <span class="sub-title">メニュー</span>
+              </a>
+            </li>
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__link" href="#">
+                <span class="main-title">About Us</span>
+                <span class="sub-title">hairswitchについて</span>
+              </a>
+            </li>
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__link" href="#">
+                <span class="main-title">Contact Us</span>
+                <span class="sub-title">ご連絡方法</span>
+              </a>
+            </li>
+          </ul>
         </div>
-        <ul class="mobile-menu__main">
-          <li class="mobile-menu__item">
-            <a class="mobile-menu__link" href="#">
-              <span class="main-title">Menu</span>
-              <span class="sub-title">メニュー</span>
-            </a>
-          </li>
-          <li class="mobile-menu__item">
-            <a class="mobile-menu__link" href="#">
-              <span class="main-title">About Us</span>
-              <span class="sub-title">hairswitchについて</span>
-            </a>
-          </li>
-          <li class="mobile-menu__item">
-            <a class="mobile-menu__link" href="#">
-              <span class="main-title">Contact Us</span>
-              <span class="sub-title">ご連絡方法</span>
-            </a>
-          </li>
-        </ul>
       </nav>
     </header>
 
-    <!-- スライダーセクション -->
+<!-- --------------------------- スライダー ------------------------------- -->
     <div class="swiper">
       <div class="swiper-container">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <img src="images/model01.jpg" class="swiper__img" />
+            <img src="images/slider/model01.jpg" class="swiper__img" />
           </div>
           <div class="swiper-slide">
-            <img src="images/model02.jpg" class="swiper__img" />
+            <img src="images/slider/model02.jpg" class="swiper__img" />
           </div>
           <div class="swiper-slide">
-            <img src="images/model06.jpg" class="swiper__img" />
+            <img src="images/slider/model06.jpg" class="swiper__img" />
           </div>
         </div>
         <div class="swiper-pagination"></div>
@@ -77,31 +80,119 @@
       </div>
     </div>
 
-    <!-- メニューセクション -->
+<!-- ----------------------------- メニューリスト ------------------------------- -->
     <div id="list__wrapper">
       <ul class="list">
-        <li class="list__item">カット〜CUT〜</li>
-        <li class="list__item">カラー〜COLOR</li>
-        <li class="list__item">パーマ〜PERM〜</li>
-        <li class="list__item">縮毛矯正</li>
-        <li class="list__item">トリートメント</li>
+        <li class="list__item">カット〜Cut〜</li>
+        <li class="list__item">カラー〜Color</li>
+        <li class="list__item">パーマ〜Perm〜</li>
+        <li class="list__item">縮毛矯正〜Straight〜</li>
+        <li class="list__item">トリートメント〜Treatment〜</li>
       </ul>
       <ul class="list">
-        <li class="list__item">ヘッドスパ〜HeadSpa</li>
-        <li class="list__item">炭酸泉</li>
-        <li class="list__item">SET/MAKE</li>
-        <li class="list__item">HairBlow</li>
-        <li class="list__item">SealExtension</li>
+        <li class="list__item">ヘッドスパ〜HeadSpa〜</li>
+        <li class="list__item">シャンプー〜Shampoo〜</li>
+        <li class="list__item">ヘアセット〜HairSet〜</li>
+        <li class="list__item">メイクアップ〜Makeup〜</li>
+        <li class="list__item">シールエクステ〜SealExtension〜</li>
       </ul>
     </div>
 
-    <div class="menu__wrapper">
-      <div class="menu__name">Cut for ladies</div>
-      <div class="menu__price">¥4,800 + tax</div>
+
+<!-- --------------------- メニューカード --------------------------->
+    <div class="menu__card">
+      <div class="menu__header">
+        <div class="menu__names">
+          <span class="menu__name">Cut for ladies</span>
+          <span class="menu__name">（女性向けカット）</span>
+        </div>
+        <span class="menu__price">¥4,800 + tax</span>
+      </div>
       <div class="menu__description">
         ・お客様のご要望を踏まえて、希望のヘアスタイルに近づくよう、スタイリストからご提案いたします。
       </div>
     </div>
+
+    <div class="menu__card">
+      <div class="menu__header">
+        <div class="menu__names">
+          <span class="menu__name">Cut for ladies</span>
+          <span class="menu__name">（女性向けカット）</span>
+        </div>
+        <span class="menu__price">¥4,800 + tax</span>
+      </div>
+      <div class="menu__description">
+        ・お客様のご要望を踏まえて、希望のヘアスタイルに近づくよう、スタイリストからご提案いたします。
+      </div>
+    </div>
+
+    <div class="menu__card">
+      <div class="menu__header">
+        <div class="menu__names">
+          <span class="menu__name">Cut for ladies</span>
+          <span class="menu__name">（女性向けカット）</span>
+        </div>
+        <span class="menu__price">¥4,800 + tax</span>
+      </div>
+      <div class="menu__description">
+        ・お客様のご要望を踏まえて、希望のヘアスタイルに近づくよう、スタイリストからご提案いたします。
+      </div>
+    </div>
+
+
+    <!-- ---------------------- スタッフ ------------------------------ -->
+    <div class="staff__card">
+      <div class="staff__head">
+        <div class="staff__img"></div>
+        <div class="staff_names">
+          <span class="staff__name">古謝 道済</span>
+          <span class="staff__name">コジャ ミチナリ</span>
+        </div>
+      </div>
+      <div class="staff__message">
+        ここにメッセージが入ります。<br>
+        ここにメッセージが入ります。<br>
+        ここにメッセージが入ります。<br>
+        ここにメッセージが入ります。<br>
+        ここにメッセージが入ります。<br>
+      </div>
+    </div>
+
+    <div class="staff__card">
+      <div class="staff__head">
+        <div id="hitomi" class="staff__img"></div>
+        <div class="staff_names">
+          <span class="staff__name">峰 瞳美</span>
+          <span class="staff__name">ミネ ヒトミ</span>
+        </div>
+      </div>
+      <div class="staff__message">
+        ここにメッセージが入ります。<br>
+        ここにメッセージが入ります。<br>
+        ここにメッセージが入ります。<br>
+        ここにメッセージが入ります。<br>
+        ここにメッセージが入ります。<br>
+      </div>
+    </div>
+
+    <div class="staff__card">
+      <div class="staff__head">
+        <div id="mariyo" class="staff__img"></div>
+        <div class="staff_names">
+          <span class="staff__name">大城 麻里世</span>
+          <span class="staff__name">オオシロ マリヨ</span>
+        </div>
+      </div>
+      <div class="staff__message">
+        ここにメッセージが入ります。<br>
+        ここにメッセージが入ります。<br>
+        ここにメッセージが入ります。<br>
+        ここにメッセージが入ります。<br>
+        ここにメッセージが入ります。<br>
+      </div>
+    </div>
+
+
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="scripts/librarys/swiper.js"></script>
   </body>
