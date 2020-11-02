@@ -142,7 +142,7 @@ header {
 }
 
 
-// ----------------------------- スタッフ------------------------
+// ----------------------------- スタッフカード------------------------
 .staff {
   &__card {
     width: 85%;
@@ -155,14 +155,18 @@ header {
   &__head {
     display: flex;
     margin-bottom: 15px;
+
   }
 
   &__img {
-    width: 50%;
+    width: 150px;
     height: 150px;
+    object-fit: cover;
+    object-position: 50% 50%; // デフォルト値の中心位置を明示的に指定
     background-image: url(../images/staff/michinari_kojya.jpg) ;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
+    overflow: hidden;
 
     &#hitomi {
       background-image: url(../images/staff/hitomi_mine.jpg);
@@ -206,6 +210,7 @@ th {
 }
 
 // ------------------------- アクセス -----------------------------
+// ------------------------- ほぼGoogleMapの調整 ------------------
 .access {
   &__wrapper {
     position: relative;
