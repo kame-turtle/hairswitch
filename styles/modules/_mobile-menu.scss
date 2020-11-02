@@ -1,3 +1,12 @@
+.section__title {
+  margin: 50px 0 0 10px;
+}
+
+.content__wrapper {
+  width: 85%;
+  margin: 0 auto ;
+}
+
 header {
   padding: 10px;
   background: skyblue;
@@ -101,7 +110,6 @@ header {
 .menu {
   &__card {
     // background-color: pink;
-    width: 85%;
     margin: 40px auto 20px;
   }
 
@@ -145,8 +153,7 @@ header {
 // ----------------------------- スタッフカード------------------------
 .staff {
   &__card {
-    width: 85%;
-    margin: 0 auto 30px;
+    margin: 0 0 30px;
     padding: 10px;
     height: 300px;
     background-color: aliceblue;
@@ -154,6 +161,7 @@ header {
 
   &__head {
     display: flex;
+    justify-content: space-between;
     margin-bottom: 15px;
 
   }
@@ -162,11 +170,11 @@ header {
     width: 150px;
     height: 150px;
     object-fit: cover;
+    overflow: hidden;
     object-position: 50% 50%; // デフォルト値の中心位置を明示的に指定
     background-image: url(../images/staff/michinari_kojya.jpg) ;
     background-size: cover;
     background-repeat: no-repeat;
-    overflow: hidden;
 
     &#hitomi {
       background-image: url(../images/staff/hitomi_mine.jpg);
@@ -229,6 +237,19 @@ th {
 }
 
 // ------------------------- お客様の声 ---------------------------
+.customer {
+  &__card {
+    margin-bottom: 20px;
+  }
+  &__info{
+    margin: 0 auto;
+    padding: 5px;
+    p {
+      margin: 0;
+    }
+  }
+}
+
 // ------------------------- ギャラリー ---------------------------
 // ------------------------- hairswitchの紹介 --------------------
 // ------------------------- 求人 --------------------------------
