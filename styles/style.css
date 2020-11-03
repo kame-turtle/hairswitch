@@ -20,12 +20,17 @@
   margin: 0 auto;
 }
 
+body {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
 .section__title {
   margin: 50px 0 0 10px;
 }
 
 .content__wrapper {
-  width: 85%;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -34,37 +39,40 @@ header {
   background: skyblue;
   margin-bottom: 20px;
   width: 100%;
+  /*チェックボックスは常に非表示*/
+  /*ハンバーガーアイコン*/
+  /*画面マスク. マスクをクリックするとdrawerを閉じる*/
+  /*中身*/
+  /*チェックが入ったらもろもろ表示*/
 }
 
-#nav-drawer {
+header #nav-drawer {
   position: relative;
   /*アイコンのスペース*/
 }
 
-#nav-drawer #nav-open {
+header #nav-drawer #nav-open {
   display: inline-block;
   width: 30px;
   height: 22px;
   vertical-align: middle;
 }
 
-#nav-drawer #nav-open span:before {
+header #nav-drawer #nav-open span:before {
   bottom: -8px;
 }
 
-#nav-drawer #nav-open span:after {
+header #nav-drawer #nav-open span:after {
   bottom: -16px;
 }
 
-/*チェックボックスは常に非表示*/
-.nav-unshown {
+header .nav-unshown {
   display: none;
 }
 
-/*ハンバーガーアイコン*/
-#nav-open span,
-#nav-open span:before,
-#nav-open span:after {
+header #nav-open span,
+header #nav-open span:before,
+header #nav-open span:after {
   position: absolute;
   height: 3px;
   /*線の太さ*/
@@ -77,8 +85,7 @@ header {
   cursor: pointer;
 }
 
-/*画面マスク. マスクをクリックするとdrawerを閉じる*/
-#nav-close {
+header #nav-close {
   display: none;
   /*初期は非表示*/
   position: fixed;
@@ -93,8 +100,7 @@ header {
   transition: 0.3s ease-in-out;
 }
 
-/*中身*/
-#nav-content {
+header #nav-content {
   overflow: auto;
   position: fixed;
   top: 0;
@@ -115,13 +121,12 @@ header {
   /*初期状態では,window外の左側に配置して隠す*/
 }
 
-/*チェックが入ったらもろもろ表示*/
-#nav-input:checked ~ #nav-close {
+header #nav-input:checked ~ #nav-close {
   display: block;
   /*画面マスクを表示*/
 }
 
-#nav-input:checked ~ #nav-content {
+header #nav-input:checked ~ #nav-content {
   -webkit-transform: translateX(0%);
   transform: translateX(0%);
   /*drawerを表示（右へスライド）*/
@@ -129,12 +134,25 @@ header {
           box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
 }
 
-#list__wrapper {
+.list {
   display: none;
 }
 
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: pink;
+}
+
 .menu__card {
-  margin: 40px auto 20px;
+  margin: 20px auto;
+  width: 300px;
+  background-color: aliceblue;
 }
 
 .menu__header {
@@ -179,13 +197,25 @@ header {
 
 .menu__description {
   width: 90%;
-  margin: 0 auto;
-  font-size: .9rem;
+  margin: 10px auto 0;
+  font-size: 0.9rem;
+}
+
+.staff {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: pink;
 }
 
 .staff__card {
-  margin: 0 0 30px;
+  margin: 20px auto;
   padding: 10px;
+  width: 300px;
   height: 300px;
   background-color: aliceblue;
 }
@@ -239,26 +269,29 @@ header {
   margin-top: auto;
 }
 
-table, td, th {
+.contact table,
+.contact td,
+.contact th {
   border: 1px solid #595959;
   border-collapse: collapse;
 }
 
-td, th {
+.contact td,
+.contact th {
   padding: 3px;
   width: 30px;
   height: 25px;
 }
 
-th {
+.contact th {
   background: #f0e6cc;
 }
 
-.even {
+.contact .even {
   background: #fbf8f0;
 }
 
-.odd {
+.contact .odd {
   background: #fefcf9;
 }
 
@@ -278,8 +311,21 @@ th {
   width: 100%;
 }
 
+.customer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: pink;
+}
+
 .customer__card {
-  margin-bottom: 20px;
+  margin: 20px auto;
+  width: 300px;
+  background-color: aliceblue;
 }
 
 .customer__info {
@@ -289,6 +335,11 @@ th {
 
 .customer__info p {
   margin: 0;
+}
+
+.customer__letter {
+  display: block;
+  margin: 0 auto 20px;
 }
 
 /******************************************************************
