@@ -7,9 +7,14 @@ body {
   margin: 50px 0 0 10px;
 }
 
-.content__wrapper {
-  width: 90%;
-  margin: 0 auto 40px;
+.content {
+  &__wrapper {
+    width: 90%;
+    margin: 0 auto 40px;
+  }
+  &__sentence {
+    margin-right: auto;
+  }
 }
 
 // ------------------ ヘッダー -------------------------
@@ -112,46 +117,48 @@ header {
 .menu {
   display: flex;
   flex-direction: column;
-  background-color: pink;
-  &__card {
-    margin: 20px auto ;
-    width: 300px;
-    background-color: aliceblue;
-  }
-
-  &__header {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__names {
-    display: flex;
-    flex-direction: column;
-    border-left: 3px solid tomato;
-  }
-
-  &__name {
-    // background-color: skyblue;
-    font-size: 1.5rem;
-    padding-left: 10px;
-    &:nth-child(2) {
-      font-size: 1rem;
-      margin: 0;
-      padding: 0;
+  // background-color: pink;
+  .content {
+    &__card {
+      margin: 10px auto ;
+      width: 100%;
+      background-color: aliceblue;
     }
-  }
 
-  &__price {
-    // background-color: greenyellow;
-    font-size: 1.5rem;
-    align-self: center;
-    background: linear-gradient(transparent 50%, tomato 70%);
-  }
+    &__header {
+      display: flex;
+      justify-content: space-between;
+    }
 
-  &__description {
-    width: 90%;
-    margin: 10px auto 0;
-    font-size: 0.9rem;
+    &__names {
+      display: flex;
+      flex-direction: column;
+      border-left: 3px solid tomato;
+    }
+
+    &__name {
+      // background-color: skyblue;
+      font-size: 1.5rem;
+      padding-left: 10px;
+      &:nth-child(2) {
+        font-size: 1rem;
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+    &__price {
+      // background-color: greenyellow;
+      font-size: 1.5rem;
+      align-self: center;
+      background: linear-gradient(transparent 50%, tomato 70%);
+    }
+
+    &__description {
+      width: 90%;
+      margin: 10px auto 0;
+      font-size: 0.9rem;
+    }
   }
 }
 
@@ -159,48 +166,56 @@ header {
 .staff {
   display: flex;
   flex-direction: column;
-  background-color: pink;
-  &__card {
-    margin: 20px auto;
-    padding: 10px;
-    width: 300px;
-    height: 300px;
-    background-color: aliceblue;
-  }
-
-  &__head {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 15px;
-  }
-
-  &__img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    overflow: hidden;
-    object-position: 50% 50%; // デフォルト値の中心位置を明示的に指定
-    background-image: url(../images/staff/michinari_kojya.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    &#hitomi {
-      background-image: url(../images/staff/hitomi_mine.jpg);
+  // background-color: pink;
+  .content {
+    &__card {
+      &:first-child {
+        margin: 10px auto;
+      }
+      margin: 20px auto;
+      padding: 10px;
+      width: 100%;
+      background-color: aliceblue;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
     }
-    &#mariyo {
-      background-image: url(../images/staff/mariyo_oshiro.jpg);
-    }
-  }
 
-  &__names {
-    display: flex;
-    flex-direction: row;
-  }
-  &__name {
-    display: block;
-  }
-  &__message {
-    margin-top: auto;
+    &__inner {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__names {
+      display: flex;
+      flex-direction: row;
+    }
+    &__name {
+      display: block;
+      &:last-child {
+        margin-bottom: 10px;
+      }
+    }
+    &__message {
+      margin-top: auto;
+    }
+
+    &__img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      overflow: hidden;
+      object-position: 50% 50%; // デフォルト値の中心位置を明示的に指定
+      background-image: url(../images/staff/michinari_kojya.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      &#hitomi {
+        background-image: url(../images/staff/hitomi_mine.jpg);
+      }
+      &#mariyo {
+        background-image: url(../images/staff/mariyo_oshiro.jpg);
+      }
+    }
   }
 }
 
@@ -252,22 +267,24 @@ header {
 .customer {
   display: flex;
   flex-direction: column;
-  background-color: pink;
-  &__card {
-    margin: 20px auto;
-    width: 300px;
-    background-color: aliceblue;
-  }
-  &__info {
-    margin: 0 auto;
-    padding: 5px;
-    p {
+  .content{
+    &__card {
+      margin: 10px auto;
+      width: 100%;
+      background-color: aliceblue;
+    }
+    &__info {
+      margin: 0 auto;
+      padding: 5px;
+    }
+    &__number,
+    &__name{
       margin: 0;
     }
-  }
-  &__letter {
-    display: block;
-    margin: 0 auto 20px;
+    &__letter {
+      display: block;
+      margin: 0 auto 20px;
+    }
   }
 }
 

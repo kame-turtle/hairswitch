@@ -1,32 +1,32 @@
 .recruit {
-  width: 90%;
-  background-color: pink;
-  margin: 0 auto;
+  .content {
+    width: 90%;
+    background-color: pink;
+    margin: 0 auto;
 
-  &__table {
-    table-layout: fixed;
-    width: 100%;
-    border-top: 1px solid black;
-  }
-  &__row {
-    border-bottom: 1px solid black;
-    // & .row1 {
-    // }
-    // & .row2 {
-    // }
-    // & .row3 {
-    // }
-  }
-  &__col {
-    &.col1 {
-      padding: 10px;
-      width: 150px;
-      background-color: green;
+    &__table {
+      table-layout: fixed;
+      width: 100%;
+      border-top: 1px solid black;
     }
-    &.col2 {
-      padding: 10px;
+    &__row {
+      border-bottom: 1px solid black;
+      // & .row1 {
+      // }
+      // & .row2 {
+      // }
+      // & .row3 {
+      // }
+    }
+    &__col {
+      &.col1 {
+        padding: 10px;
+        width: 100px;
+        background-color: green;
+      }
+      &.col2 {
+        padding: 10px;
+      }
     }
   }
 }
-
-

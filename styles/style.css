@@ -34,6 +34,10 @@ body {
   margin: 0 auto 40px;
 }
 
+.content__sentence {
+  margin-right: auto;
+}
+
 header {
   padding: 10px;
   background: skyblue;
@@ -146,16 +150,15 @@ header #nav-input:checked ~ #nav-content {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: pink;
 }
 
-.menu__card {
-  margin: 20px auto;
-  width: 300px;
+.menu .content__card {
+  margin: 10px auto;
+  width: 100%;
   background-color: aliceblue;
 }
 
-.menu__header {
+.menu .content__header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -164,7 +167,7 @@ header #nav-input:checked ~ #nav-content {
           justify-content: space-between;
 }
 
-.menu__names {
+.menu .content__names {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -175,18 +178,18 @@ header #nav-input:checked ~ #nav-content {
   border-left: 3px solid tomato;
 }
 
-.menu__name {
+.menu .content__name {
   font-size: 1.5rem;
   padding-left: 10px;
 }
 
-.menu__name:nth-child(2) {
+.menu .content__name:nth-child(2) {
   font-size: 1rem;
   margin: 0;
   padding: 0;
 }
 
-.menu__price {
+.menu .content__price {
   font-size: 1.5rem;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -195,7 +198,7 @@ header #nav-input:checked ~ #nav-content {
   background: linear-gradient(transparent 50%, tomato 70%);
 }
 
-.menu__description {
+.menu .content__description {
   width: 90%;
   margin: 10px auto 0;
   font-size: 0.9rem;
@@ -209,18 +212,13 @@ header #nav-input:checked ~ #nav-content {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: pink;
 }
 
-.staff__card {
+.staff .content__card {
   margin: 20px auto;
   padding: 10px;
-  width: 300px;
-  height: 300px;
+  width: 100%;
   background-color: aliceblue;
-}
-
-.staff__head {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -230,7 +228,43 @@ header #nav-input:checked ~ #nav-content {
   margin-bottom: 15px;
 }
 
-.staff__img {
+.staff .content__card:first-child {
+  margin: 10px auto;
+}
+
+.staff .content__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.staff .content__names {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.staff .content__name {
+  display: block;
+}
+
+.staff .content__name:last-child {
+  margin-bottom: 10px;
+}
+
+.staff .content__message {
+  margin-top: auto;
+}
+
+.staff .content__img {
   width: 150px;
   height: 150px;
   -o-object-fit: cover;
@@ -243,30 +277,12 @@ header #nav-input:checked ~ #nav-content {
   background-repeat: no-repeat;
 }
 
-.staff__img#hitomi {
+.staff .content__img#hitomi {
   background-image: url(../images/staff/hitomi_mine.jpg);
 }
 
-.staff__img#mariyo {
+.staff .content__img#mariyo {
   background-image: url(../images/staff/mariyo_oshiro.jpg);
-}
-
-.staff__names {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-.staff__name {
-  display: block;
-}
-
-.staff__message {
-  margin-top: auto;
 }
 
 .contact table,
@@ -319,52 +335,51 @@ header #nav-input:checked ~ #nav-content {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: pink;
 }
 
-.customer__card {
-  margin: 20px auto;
-  width: 300px;
+.customer .content__card {
+  margin: 10px auto;
+  width: 100%;
   background-color: aliceblue;
 }
 
-.customer__info {
+.customer .content__info {
   margin: 0 auto;
   padding: 5px;
 }
 
-.customer__info p {
+.customer .content__number, .customer .content__name {
   margin: 0;
 }
 
-.customer__letter {
+.customer .content__letter {
   display: block;
   margin: 0 auto 20px;
 }
 
-.recruit {
+.recruit .content {
   width: 90%;
   background-color: pink;
   margin: 0 auto;
 }
 
-.recruit__table {
+.recruit .content__table {
   table-layout: fixed;
   width: 100%;
   border-top: 1px solid black;
 }
 
-.recruit__row {
+.recruit .content__row {
   border-bottom: 1px solid black;
 }
 
-.recruit__col.col1 {
+.recruit .content__col.col1 {
   padding: 10px;
-  width: 150px;
+  width: 100px;
   background-color: green;
 }
 
-.recruit__col.col2 {
+.recruit .content__col.col2 {
   padding: 10px;
 }
 
