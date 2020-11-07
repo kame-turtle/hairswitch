@@ -19,6 +19,7 @@
   <body>
     <!-- ------------------------- ヘッダー -------------------------- -->
     <header id="header">
+      <!-------------------------- スマホ表示用 -------------------------->
       <nav id="nav-drawer">
         <!-- 表示状態管理用.チェックボックス自体は常に非表示 -->
         <input id="nav-input" type="checkbox" class="nav-unshown" />
@@ -56,6 +57,33 @@
           </ul>
         </div>
       </nav>
+      <!-------------------------- PC表示用 ----------------------------->
+      <nav id="nav-bar" class="content__width">
+        <div class="nav__wrapper ">
+          <div class="nav__logo">
+            <a href="#"><img src="images/logo.jpg" alt=""></a>
+          </div>
+          <div class="nav__title">
+            <h1>hairswitch</h1>
+          </div>
+            <ul class="nav__menu">
+              <li class="nav__list"><a href="#">Menu & Price</a></li>
+              <li class="nav__list"><a href="#">Staff</a></li>
+              <li class="nav__list"><a href="#">Contact</a></li>
+              <li class="nav__list"><a href="#">Access</a></li>
+              <li class="nav__list"><a href="#">お客様の声</a></li>
+            </ul>
+            <ul>
+              <li class="nav__list"><a href="#">インスタギャラリー</a></li>
+              <li class="nav__list"><a href="#">hairswitchのご紹介</a></li>
+              <li class="nav__list"><a href="#">求人情報</a></li>
+              <li class="nav__list"><a href="#">各種モデル募集</a></li>
+              <li class="nav__list"><a href="#">成人式のご予約</a></li>
+            </ul>
+          </div>
+      </nav>
+
+
     </header>
 
     <!-- ------------------------- スライダー ------------------------ -->
@@ -424,7 +452,7 @@
                   <td class="content__col col1">入社決定後<br />について</td>
                   <td class="content__col col2">
                     入社後、速やかにお客様対応に入れるよう、<br />
-                    入社決定〜４月までの期間、事前レッスンがあります。<br />
+                    入社決定〜４月までの期間に事前レッスンがあります。<br />
                   </td>
                 </tr>
                 <tr class="content__row row6">
@@ -443,7 +471,7 @@
       </div>
     </div>
     <!-- ------------------------- モデル募集 ------------------ -->
-    <h2 id="model" class="section__title">各種モデル募集中</h2>
+    <h2 id="model" class="section__title">各種モデル募集</h2>
     <div class="model content__wrapper">
       <div class="content__category photo">
           <h3>撮影モデル</h3>

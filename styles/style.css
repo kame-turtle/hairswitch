@@ -21,12 +21,16 @@
 }
 
 body {
-  max-width: 1024px;
   margin: 0 auto;
 }
 
 .section__title {
   margin: 50px 0 0 10px;
+}
+
+.content__width {
+  max-width: 1024px;
+  margin: 0 auto;
 }
 
 .content__wrapper {
@@ -429,12 +433,6 @@ body {
   padding-bottom: 48px;
 }
 
-.content-width {
-  width: 90%;
-  margin: 0 auto;
-  max-width: 1024px;
-}
-
 @media (min-width: 480px) {
   /******************************************************************
 
@@ -478,6 +476,9 @@ pc用（ラップトップ以上）のスタイル定義！！！
   }
   .pb-lg {
     padding-bottom: 96px;
+  }
+  #nav-drawer {
+    display: none;
   }
 }
 
