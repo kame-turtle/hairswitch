@@ -9,16 +9,16 @@ pc用（ラップトップ以上）のスタイル定義！！！
 ******************************************************************/
 // フォント専用クラス
 .font-sm {
-  font-size: 16px;  //small size
+  font-size: 16px; //small size
 }
 .font-md {
-  font-size: 19px;  //middle size
+  font-size: 19px; //middle size
 }
 .font-lr {
-  font-size: 23px;  //larger size
+  font-size: 23px; //larger size
 }
 .font-lg {
-  font-size: 36px;  //large size
+  font-size: 36px; //large size
 }
 
 // margin専用クラス
@@ -31,6 +31,46 @@ pc用（ラップトップ以上）のスタイル定義！！！
   padding-bottom: 96px;
 }
 
-#nav-drawer {
-  display: none;
+header {
+  padding: 0;
+  #nav-drawer {
+    display: none;
+  }
+  #nav-bar {
+    display: block;
+    .nav {
+      &__wrapper {
+        display: flex;
+        justify-content: space-between;
+      }
+      &__logo {
+        display: flex;
+        flex-direction: row;
+      }
+      &__img > a > img {
+        width: 100px;
+      }
+      &__title {
+        & > h1 {
+          margin: 0;
+        }
+        margin-left: 15px;
+        align-self: center;
+      }
+      &__menu {
+        display: flex;
+        align-self: center;
+        ul {
+          list-style: none;
+          margin: 0;
+          // padding: 0;
+        }
+      }
+      &__list {
+        & > a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
 }

@@ -44,19 +44,23 @@ body {
 
 header {
   padding: 10px;
-  background: skyblue;
   margin-bottom: 20px;
   width: 100%;
-  /*チェックボックスは常に非表示*/
-  /*ハンバーガーアイコン*/
-  /*画面マスク. マスクをクリックするとdrawerを閉じる*/
-  /*中身*/
-  /*チェックが入ったらもろもろ表示*/
+  height: 100px;
+}
+
+header #nav-bar {
+  display: none;
 }
 
 header #nav-drawer {
   position: relative;
   /*アイコンのスペース*/
+  /*チェックボックスは常に非表示*/
+  /*ハンバーガーアイコン*/
+  /*画面マスク. マスクをクリックするとdrawerを閉じる*/
+  /*中身*/
+  /*チェックが入ったらもろもろ表示*/
 }
 
 header #nav-drawer #nav-open {
@@ -74,13 +78,13 @@ header #nav-drawer #nav-open span:after {
   bottom: -16px;
 }
 
-header .nav-unshown {
+header #nav-drawer .nav-unshown {
   display: none;
 }
 
-header #nav-open span,
-header #nav-open span:before,
-header #nav-open span:after {
+header #nav-drawer #nav-open span,
+header #nav-drawer #nav-open span:before,
+header #nav-drawer #nav-open span:after {
   position: absolute;
   height: 3px;
   /*線の太さ*/
@@ -93,7 +97,7 @@ header #nav-open span:after {
   cursor: pointer;
 }
 
-header #nav-close {
+header #nav-drawer #nav-close {
   display: none;
   /*初期は非表示*/
   position: fixed;
@@ -108,7 +112,7 @@ header #nav-close {
   transition: 0.3s ease-in-out;
 }
 
-header #nav-content {
+header #nav-drawer #nav-content {
   overflow: auto;
   position: fixed;
   top: 0;
@@ -129,12 +133,12 @@ header #nav-content {
   /*初期状態では,window外の左側に配置して隠す*/
 }
 
-header #nav-input:checked ~ #nav-close {
+header #nav-drawer #nav-input:checked ~ #nav-close {
   display: block;
   /*画面マスクを表示*/
 }
 
-header #nav-input:checked ~ #nav-content {
+header #nav-drawer #nav-input:checked ~ #nav-content {
   -webkit-transform: translateX(0%);
   transform: translateX(0%);
   /*drawerを表示（右へスライド）*/
@@ -477,8 +481,57 @@ pc用（ラップトップ以上）のスタイル定義！！！
   .pb-lg {
     padding-bottom: 96px;
   }
-  #nav-drawer {
+  header {
+    padding: 0;
+  }
+  header #nav-drawer {
     display: none;
+  }
+  header #nav-bar {
+    display: block;
+  }
+  header #nav-bar .nav__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  header #nav-bar .nav__logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  header #nav-bar .nav__img > a > img {
+    width: 100px;
+  }
+  header #nav-bar .nav__title {
+    margin-left: 15px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  header #nav-bar .nav__title > h1 {
+    margin: 0;
+  }
+  header #nav-bar .nav__menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+  header #nav-bar .nav__menu ul {
+    list-style: none;
+    margin: 0;
+  }
+  header #nav-bar .nav__list > a {
+    text-decoration: none;
   }
 }
 
