@@ -2,8 +2,15 @@ body {
   margin: 0 auto;
 }
 
-.section__title {
-  margin: 50px 0 0 10px;
+
+.section {
+  &__wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+  &__title {
+    margin: 50px 0 0 10px;
+  }
 }
 
 .content {
@@ -13,6 +20,7 @@ body {
   }
 
   &__wrapper {
+    max-width: 1024px;
     width: 90%;
     margin: 0 auto 40px;
   }
@@ -125,11 +133,11 @@ header {
 .menu {
   display: flex;
   flex-direction: column;
-  // background-color: pink;
   .content {
     &__card {
-      margin: 10px auto;
-      width: 100%;
+      margin: 20px auto;
+      min-width: 288px;
+      max-width: 300px;
       background-color: aliceblue;
     }
 
@@ -145,7 +153,6 @@ header {
     }
 
     &__name {
-      // background-color: skyblue;
       padding-left: 10px;
       &:nth-child(2) {
         font-size: 1rem;
@@ -169,15 +176,16 @@ header {
 .staff {
   display: flex;
   flex-direction: column;
-  // background-color: pink;
   .content {
     &__card {
       &:first-child {
         margin: 10px auto;
       }
-      margin: 20px auto;
       padding: 10px;
+      margin: 20px auto;
       width: 100%;
+      min-width: 288px;
+      max-width: 300px;
       background-color: aliceblue;
       display: flex;
       flex-direction: column;
@@ -277,6 +285,9 @@ header {
     &__card {
       margin: 10px auto;
       width: 100%;
+      min-width: 288px;
+      max-width: 300px;
+
       background-color: aliceblue;
     }
     &__info {

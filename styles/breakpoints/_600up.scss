@@ -3,3 +3,40 @@
 Stylesheet: 600px以上のタブレットやモニタで適用
 
 ******************************************************************/
+
+
+
+// ------------------メニューカード-------------------------
+.menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  .content {
+    &__header {
+      flex-direction: column;
+    }
+  }
+}
+
+// ------------------ スタッフカード------------------------
+.staff {
+  flex-direction: row;
+  flex-wrap: wrap;
+  .content {
+    &__card {
+      &:first-child {
+        margin: 20px auto;
+      }
+    }
+
+    &__message {
+      margin-top: auto;
+    }
+  }
+}
+
+// ------------------ お客様の声 ---------------------------
+.customer {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
