@@ -40,7 +40,7 @@ body {
 
 .content__wrapper {
   max-width: 1024px;
-  width: 90%;
+  width: 95%;
   margin: 0 auto 40px;
 }
 
@@ -170,7 +170,6 @@ header #nav-drawer #nav-input:checked ~ #nav-content {
   margin: 20px auto;
   min-width: 288px;
   max-width: 300px;
-  background-color: aliceblue;
 }
 
 .menu .content__header {
@@ -398,6 +397,10 @@ header #nav-drawer #nav-input:checked ~ #nav-content {
   padding: 10px 0 10px 10px;
 }
 
+.recruit .content__col.col2 > p {
+  margin: 0;
+}
+
 /******************************************************************
 
 Stylesheet: ベーススタイル
@@ -468,6 +471,11 @@ Stylesheet: 600px以上のタブレットやモニタで適用
             flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+  .menu .content__wrapper {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .menu .content__header {
     -webkit-box-orient: vertical;

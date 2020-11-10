@@ -12,6 +12,9 @@ Stylesheet: 600px以上のタブレットやモニタで適用
   flex-direction: row;
   flex-wrap: wrap;
   .content {
+    &__wrapper {
+      justify-content: space-between;
+    }
     &__header {
       flex-direction: column;
     }
