@@ -166,13 +166,13 @@ header #nav-drawer #nav-input:checked ~ #nav-content {
           flex-direction: column;
 }
 
-.menu .content__card {
+.menu .content__menu-card {
   margin: 20px auto;
   min-width: 288px;
   max-width: 300px;
 }
 
-.menu .content__header {
+.menu .content__menu-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -181,7 +181,7 @@ header #nav-drawer #nav-input:checked ~ #nav-content {
           justify-content: space-between;
 }
 
-.menu .content__names {
+.menu .content__menu-names {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -192,17 +192,17 @@ header #nav-drawer #nav-input:checked ~ #nav-content {
   border-left: 3px solid tomato;
 }
 
-.menu .content__name {
+.menu .content__menu-name {
   padding-left: 10px;
 }
 
-.menu .content__name:nth-child(2) {
+.menu .content__menu-name:nth-child(2) {
   font-size: 1rem;
   margin: 0;
   padding: 0;
 }
 
-.menu .content__price {
+.menu .content__menu-price {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -210,7 +210,7 @@ header #nav-drawer #nav-input:checked ~ #nav-content {
   background: linear-gradient(transparent 50%, tomato 80%);
 }
 
-.menu .content__description {
+.menu .content__menu-desc {
   margin: 10px auto 0;
 }
 
@@ -224,7 +224,7 @@ header #nav-drawer #nav-input:checked ~ #nav-content {
           flex-direction: column;
 }
 
-.staff .content__card {
+.staff .content__staff-card {
   padding: 10px;
   margin: 20px auto;
   width: 100%;
@@ -243,11 +243,11 @@ header #nav-drawer #nav-input:checked ~ #nav-content {
   margin-bottom: 15px;
 }
 
-.staff .content__card:first-child {
+.staff .content__staff-card:first-child {
   margin: 10px auto;
 }
 
-.staff .content__header {
+.staff .content__staff-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -260,7 +260,7 @@ header #nav-drawer #nav-input:checked ~ #nav-content {
   margin-bottom: 10px;
 }
 
-.staff .content__names {
+.staff .content__staff-names {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -270,19 +270,19 @@ header #nav-drawer #nav-input:checked ~ #nav-content {
           flex-direction: row;
 }
 
-.staff .content__name {
+.staff .content__staff-name {
   display: block;
 }
 
-.staff .content__name:last-child {
+.staff .content__staff-name:last-child {
   margin-bottom: 10px;
 }
 
-.staff .content__message {
+.staff .content__staff-message {
   margin-top: auto;
 }
 
-.staff .content__img {
+.staff .content__staff-img {
   width: 120px;
   height: 120px;
   -o-object-fit: cover;
@@ -295,11 +295,11 @@ header #nav-drawer #nav-input:checked ~ #nav-content {
   background-repeat: no-repeat;
 }
 
-.staff .content__img#hitomi {
+.staff .content__staff-img#hitomi {
   background-image: url(../images/staff/hitomi_mine.jpg);
 }
 
-.staff .content__img#mariyo {
+.staff .content__staff-img#mariyo {
   background-image: url(../images/staff/mariyo_oshiro.jpg);
 }
 
@@ -355,7 +355,7 @@ header #nav-drawer #nav-input:checked ~ #nav-content {
           flex-direction: column;
 }
 
-.customer .content__card {
+.customer .content__customer-card {
   margin: 10px auto;
   width: 100%;
   min-width: 288px;
@@ -363,16 +363,16 @@ header #nav-drawer #nav-input:checked ~ #nav-content {
   background-color: aliceblue;
 }
 
-.customer .content__info {
+.customer .content__customer-info {
   margin: 0 auto;
   padding: 5px;
 }
 
-.customer .content__number, .customer .content__name {
+.customer .content__customer-number, .customer .content__customer-name {
   margin: 0;
 }
 
-.customer .content__letter {
+.customer .content__customer-letter {
   display: block;
   margin: 0 auto 20px;
 }

@@ -136,25 +136,25 @@ header {
   display: flex;
   flex-direction: column;
   .content {
-    &__card {
+    &__menu-card {
       margin: 20px auto;
       min-width: 288px;
       max-width: 300px;
       // background-color: aliceblue;
     }
 
-    &__header {
+    &__menu-header {
       display: flex;
       justify-content: space-between;
     }
 
-    &__names {
+    &__menu-names {
       display: flex;
       flex-direction: column;
       border-left: 3px solid tomato;
     }
 
-    &__name {
+    &__menu-name {
       padding-left: 10px;
       &:nth-child(2) {
         font-size: 1rem;
@@ -163,12 +163,12 @@ header {
       }
     }
 
-    &__price {
+    &__menu-price {
       align-self: center;
       background: linear-gradient(transparent 50%, tomato 80%);
     }
 
-    &__description {
+    &__menu-desc {
       margin: 10px auto 0;
     }
   }
@@ -179,7 +179,7 @@ header {
   display: flex;
   flex-direction: column;
   .content {
-    &__card {
+    &__staff-card {
       &:first-child {
         margin: 10px auto;
       }
@@ -195,28 +195,28 @@ header {
       margin-bottom: 15px;
     }
 
-    &__header {
+    &__staff-header {
       display: flex;
       flex-direction: row;
       justify-content: space-around;
       margin-bottom: 10px;
     }
 
-    &__names {
+    &__staff-names {
       display: flex;
       flex-direction: row;
     }
-    &__name {
+    &__staff-name {
       display: block;
       &:last-child {
         margin-bottom: 10px;
       }
     }
-    &__message {
+    &__staff-message {
       margin-top: auto;
     }
 
-    &__img {
+    &__staff-img {
       width: 120px;
       height: 120px;
       object-fit: cover;
@@ -284,7 +284,7 @@ header {
   display: flex;
   flex-direction: column;
   .content {
-    &__card {
+    &__customer-card {
       margin: 10px auto;
       width: 100%;
       min-width: 288px;
@@ -292,15 +292,15 @@ header {
 
       background-color: aliceblue;
     }
-    &__info {
+    &__customer-info {
       margin: 0 auto;
       padding: 5px;
     }
-    &__number,
-    &__name {
+    &__customer-number,
+    &__customer-name {
       margin: 0;
     }
-    &__letter {
+    &__customer-letter {
       display: block;
       margin: 0 auto 20px;
     }
