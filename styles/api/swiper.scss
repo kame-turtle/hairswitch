@@ -1,7 +1,9 @@
 .swiper {
-  max-width: 1024px;
-  height: 300px;
-  margin: 0 auto;
+  &-contaier {
+    max-width: 1024px;
+    height: 300px;
+    margin: 0 auto;
+  }
   &-slide {
     width: 600px;
     height: 300px;

@@ -5,7 +5,7 @@ let mySwiper = new Swiper('.swiper-container', {
   loop: true,   //最後に達したら先頭に戻る
   speed: 1000,  //スライド遷移にかける時間(ms)
   autoplay: {   //自動再生したい場合の基本設定
-    delay: 1500,  //スライド切替間隔(ms)
+    delay: 3000,  //スライド切替間隔(ms)
     disableOnInteraction: true  //クリック、ドラッグされたら自動再生を無効にする
   },
   effect: 'coverflow',  //スライドのエフェクトを coverflow に

@@ -18,7 +18,7 @@ pc用（ラップトップ以上）のスタイル定義！！！
   font-size: 23px; //larger size
 }
 .font-lg {
-  font-size: 36px; //large size
+  font-size: 30px; //large size
 }
 
 // margin専用クラス
@@ -52,6 +52,7 @@ header {
       }
       &__title {
         & > h1 {
+          font-size: 32px;
           margin: 0;
         }
         margin-left: 15px;
@@ -63,7 +64,7 @@ header {
         ul {
           list-style: none;
           margin: 0;
-          // padding: 0;
+          padding: 15px;
         }
       }
       &__list {

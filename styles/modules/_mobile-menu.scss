@@ -33,12 +33,10 @@ body {
 header {
   padding: 10px;
   // background: skyblue;
-  margin-bottom: 20px;
   // position: fixed;
   // top: 0;
   // left: 0;
   width: 100%;
-  height: 100px;
 
   #nav-bar {
     display: none;
@@ -317,3 +315,15 @@ header {
 // ------------------- カットモデル募集 ----------------------
 
 // ------------------- 成人式 ------------------------------
+.ceremony {
+  .content {
+    &__wrapper {
+    }
+    &__inner {
+      .align {
+        display: inline-block;
+        width: 12em;
+      }
+    }
+  }
+}
