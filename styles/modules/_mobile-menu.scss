@@ -279,7 +279,7 @@ header {
     max-width: 300px; /*drawerメニューの最大幅.適宜調整*/
     height: 80vh;
     background: lightblue;
-    transition: 0.3s ease-in-out; /*drawerのアニメーション設定*/
+    transition: 0.4s ease-in-out; /*drawerのアニメーション設定*/
     -webkit-transform: translateX(-105%);
     transform: translateX(-105%); /*初期状態では,window外の左側に配置して隠す*/
   }

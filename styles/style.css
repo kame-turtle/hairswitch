@@ -28,6 +28,7 @@
 }
 
 .mobile .footer__nav-list {
+  padding: 10px;
   background-color: #ad9f8a;
   color: white;
   font-weight: bold;
@@ -359,8 +360,8 @@ header #nav-bar {
   /*drawerメニューの最大幅.適宜調整*/
   height: 80vh;
   background: lightblue;
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
   /*drawerのアニメーション設定*/
   -webkit-transform: translateX(-105%);
   transform: translateX(-105%);
