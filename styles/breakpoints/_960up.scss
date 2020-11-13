@@ -31,11 +31,12 @@ pc用（ラップトップ以上）のスタイル定義！！！
   padding-bottom: 96px;
 }
 
+.mobile.footer {
+  display: none;
+}
+
 header {
   padding: 0;
-  #nav-drawer {
-    display: none;
-  }
   #nav-bar {
     display: block;
     .nav {

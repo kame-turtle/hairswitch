@@ -20,6 +20,34 @@
   margin: 0 auto;
 }
 
+.mobile .footer__nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.mobile .footer__nav-list {
+  background-color: #ad9f8a;
+  color: white;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.mobile .footer__nav-list > li {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mobile .footer__nav-list .nav-open {
+  display: block;
+  padding: 10px 15px;
+}
+
 body {
   margin: 0 auto;
 }
@@ -55,99 +83,6 @@ header {
 
 header #nav-bar {
   display: none;
-}
-
-header #nav-drawer {
-  position: relative;
-  /*アイコンのスペース*/
-  /*チェックボックスは常に非表示*/
-  /*ハンバーガーアイコン*/
-  /*画面マスク. マスクをクリックするとdrawerを閉じる*/
-  /*中身*/
-  /*チェックが入ったらもろもろ表示*/
-}
-
-header #nav-drawer #nav-open {
-  display: inline-block;
-  width: 30px;
-  height: 22px;
-  vertical-align: middle;
-}
-
-header #nav-drawer #nav-open span:before {
-  bottom: -8px;
-}
-
-header #nav-drawer #nav-open span:after {
-  bottom: -16px;
-}
-
-header #nav-drawer .nav-unshown {
-  display: none;
-}
-
-header #nav-drawer #nav-open span,
-header #nav-drawer #nav-open span:before,
-header #nav-drawer #nav-open span:after {
-  position: absolute;
-  height: 3px;
-  /*線の太さ*/
-  width: 25px;
-  /*長さ*/
-  border-radius: 3px;
-  background: #555;
-  display: block;
-  content: "";
-  cursor: pointer;
-}
-
-header #nav-drawer #nav-close {
-  display: none;
-  /*初期は非表示*/
-  position: fixed;
-  z-index: 99;
-  top: 0;
-  /*全体に広がるように*/
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
-}
-
-header #nav-drawer #nav-content {
-  overflow: auto;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 9999;
-  /*最前面に持ってくるので,画面マスクより大きい値を設定*/
-  width: 90%;
-  /*drawerメニューをタッチしても閉じないため,右側に隙間を作る（閉じるカバーを表示）*/
-  max-width: 300px;
-  /*drawerメニューの最大幅.適宜調整*/
-  height: 50vh;
-  background: lightblue;
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
-  /*draweのアニメーション設定*/
-  -webkit-transform: translateX(-105%);
-  transform: translateX(-105%);
-  /*初期状態では,window外の左側に配置して隠す*/
-}
-
-header #nav-drawer #nav-input:checked ~ #nav-close {
-  display: block;
-  /*画面マスクを表示*/
-}
-
-header #nav-drawer #nav-input:checked ~ #nav-content {
-  -webkit-transform: translateX(0%);
-  transform: translateX(0%);
-  /*drawerを表示（右へスライド）*/
-  -webkit-box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
-          box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
 }
 
 .list {
@@ -380,6 +315,97 @@ header #nav-drawer #nav-input:checked ~ #nav-content {
   width: 12em;
 }
 
+/*チェックボックスは常に非表示*/
+.mobile.footer {
+  position: relative;
+  /*画面マスク. マスクをクリックするとdrawerを閉じる*/
+  /*中身*/
+  /*チェックが入ったらもろもろ表示*/
+}
+
+.mobile.footer .nav-unshown {
+  display: none;
+}
+
+.mobile.footer #nav-menu-close,
+.mobile.footer #nav-reserve-close,
+.mobile.footer #nav-news-close {
+  display: none;
+  /*初期は非表示*/
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  /*全体に広がるように*/
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.mobile.footer #nav-list__menu,
+.mobile.footer #nav-list__reserve,
+.mobile.footer #nav-list__news {
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  /*最前面に持ってくるので,画面マスクより大きい値を設定*/
+  width: 90%;
+  /*drawerメニューをタッチしても閉じないため,右側に隙間を作る（閉じるカバーを表示）*/
+  max-width: 300px;
+  /*drawerメニューの最大幅.適宜調整*/
+  height: 80vh;
+  background: lightblue;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  /*drawerのアニメーション設定*/
+  -webkit-transform: translateX(-105%);
+  transform: translateX(-105%);
+  /*初期状態では,window外の左側に配置して隠す*/
+}
+
+.mobile.footer #nav-menu:checked ~ #nav-menu-close {
+  display: block;
+  /*画面マスクを表示*/
+}
+
+.mobile.footer #nav-menu:checked ~ #nav-list__menu {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+  /*drawerを表示（右へスライド）*/
+  -webkit-box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
+          box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
+}
+
+.mobile.footer #nav-reserve:checked ~ #nav-reserve-close {
+  display: block;
+  /*画面マスクを表示*/
+}
+
+.mobile.footer #nav-reserve:checked ~ #nav-list__reserve {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+  /*drawerを表示（右へスライド）*/
+  -webkit-box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
+          box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
+}
+
+.mobile.footer #nav-news:checked ~ #nav-news-close {
+  display: block;
+  /*画面マスクを表示*/
+}
+
+.mobile.footer #nav-news:checked ~ #nav-list__news {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+  /*drawerを表示（右へスライド）*/
+  -webkit-box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
+          box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
+}
+
 .recruit .content__table {
   table-layout: fixed;
   width: 100%;
@@ -538,11 +564,11 @@ pc用（ラップトップ以上）のスタイル定義！！！
   .pb-lg {
     padding-bottom: 96px;
   }
+  .mobile.footer {
+    display: none;
+  }
   header {
     padding: 0;
-  }
-  header #nav-drawer {
-    display: none;
   }
   header #nav-bar {
     display: block;

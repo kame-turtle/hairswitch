@@ -2,7 +2,6 @@ body {
   margin: 0 auto;
 }
 
-
 .section {
   &__wrapper {
     max-width: 1024px;
@@ -37,91 +36,8 @@ header {
   // top: 0;
   // left: 0;
   width: 100%;
-
   #nav-bar {
     display: none;
-  }
-
-  #nav-drawer {
-    position: relative;
-
-    /*アイコンのスペース*/
-    #nav-open {
-      display: inline-block;
-      width: 30px;
-      height: 22px;
-      vertical-align: middle;
-
-      & span {
-        &:before {
-          bottom: -8px;
-        }
-        &:after {
-          bottom: -16px;
-        }
-      }
-    }
-
-    /*チェックボックスは常に非表示*/
-    .nav-unshown {
-      display: none;
-    }
-
-    /*ハンバーガーアイコン*/
-    #nav-open span,
-    #nav-open span:before,
-    #nav-open span:after {
-      position: absolute;
-      height: 3px; /*線の太さ*/
-      width: 25px; /*長さ*/
-      border-radius: 3px;
-      background: #555;
-      display: block;
-      content: "";
-      cursor: pointer;
-    }
-
-    /*画面マスク. マスクをクリックするとdrawerを閉じる*/
-    #nav-close {
-      display: none; /*初期は非表示*/
-      position: fixed;
-      z-index: 99;
-      top: 0; /*全体に広がるように*/
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5);
-      transition: 0.3s ease-in-out;
-    }
-
-    /*中身*/
-    #nav-content {
-      overflow: auto;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 9999; /*最前面に持ってくるので,画面マスクより大きい値を設定*/
-      width: 90%; /*drawerメニューをタッチしても閉じないため,右側に隙間を作る（閉じるカバーを表示）*/
-      max-width: 300px; /*drawerメニューの最大幅.適宜調整*/
-      height: 50vh;
-      background: lightblue;
-      transition: 0.3s ease-in-out; /*draweのアニメーション設定*/
-      -webkit-transform: translateX(-105%);
-      transform: translateX(
-        -105%
-      ); /*初期状態では,window外の左側に配置して隠す*/
-    }
-
-    /*チェックが入ったらもろもろ表示*/
-    #nav-input:checked ~ #nav-close {
-      display: block; /*画面マスクを表示*/
-    }
-
-    #nav-input:checked ~ #nav-content {
-      -webkit-transform: translateX(0%);
-      transform: translateX(0%); /*drawerを表示（右へスライド）*/
-      box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
-    }
   }
 }
 // ------------------メニューリスト-------------------------
@@ -317,13 +233,82 @@ header {
 // ------------------- 成人式 ------------------------------
 .ceremony {
   .content {
-    &__wrapper {
-    }
     &__inner {
       .align {
         display: inline-block;
         width: 12em;
       }
     }
+  }
+}
+
+// ------------------- フッター ----------------------------
+/*チェックボックスは常に非表示*/
+
+.mobile.footer {
+  position: relative;
+  .nav-unshown {
+    display: none;
+  }
+
+  /*画面マスク. マスクをクリックするとdrawerを閉じる*/
+  #nav-menu-close,
+  #nav-reserve-close,
+  #nav-news-close {
+    display: none; /*初期は非表示*/
+    position: fixed;
+    z-index: 99;
+    top: 0; /*全体に広がるように*/
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease-in-out;
+  }
+
+  /*中身*/
+  #nav-list__menu,
+  #nav-list__reserve,
+  #nav-list__news {
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999; /*最前面に持ってくるので,画面マスクより大きい値を設定*/
+    width: 90%; /*drawerメニューをタッチしても閉じないため,右側に隙間を作る（閉じるカバーを表示）*/
+    max-width: 300px; /*drawerメニューの最大幅.適宜調整*/
+    height: 80vh;
+    background: lightblue;
+    transition: 0.3s ease-in-out; /*drawerのアニメーション設定*/
+    -webkit-transform: translateX(-105%);
+    transform: translateX(-105%); /*初期状態では,window外の左側に配置して隠す*/
+  }
+
+  /*チェックが入ったらもろもろ表示*/
+  #nav-menu:checked ~ #nav-menu-close {
+    display: block; /*画面マスクを表示*/
+  }
+  #nav-menu:checked ~ #nav-list__menu {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%); /*drawerを表示（右へスライド）*/
+    box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
+  }
+
+  #nav-reserve:checked ~ #nav-reserve-close {
+    display: block; /*画面マスクを表示*/
+  }
+  #nav-reserve:checked ~ #nav-list__reserve {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%); /*drawerを表示（右へスライド）*/
+    box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
+  }
+
+  #nav-news:checked ~ #nav-news-close {
+    display: block; /*画面マスクを表示*/
+  }
+  #nav-news:checked ~ #nav-list__news {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%); /*drawerを表示（右へスライド）*/
+    box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
   }
 }

@@ -1,0 +1,26 @@
+.mobile {
+  .footer {
+    &__nav {
+      // display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+    &__nav-list {
+      background-color: #ad9f8a;
+      color: white;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-around;
+      & > li {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .nav-open {
+        display: block;
+        padding: 10px 15px;
+      }
+    }
+  }
+}
