@@ -282,6 +282,7 @@ header {
     transition: 0.4s ease-in-out; /*drawerのアニメーション設定*/
     -webkit-transform: translateX(-105%);
     transform: translateX(-105%); /*初期状態では,window外の左側に配置して隠す*/
+    padding: 30px;
   }
 
   /*チェックが入ったらもろもろ表示*/

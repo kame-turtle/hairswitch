@@ -366,6 +366,7 @@ header #nav-bar {
   -webkit-transform: translateX(-105%);
   transform: translateX(-105%);
   /*初期状態では,window外の左側に配置して隠す*/
+  padding: 30px;
 }
 
 .mobile.footer #nav-menu:checked ~ #nav-menu-close {
