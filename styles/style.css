@@ -263,6 +263,11 @@ header #nav-bar {
   background: #fefcf9;
 }
 
+.contact__line__icon {
+  width: auto;
+  height: 25px;
+}
+
 .access__map {
   position: relative;
   height: 0;
@@ -316,11 +321,9 @@ header #nav-bar {
   width: 12em;
 }
 
-/*チェックボックスは常に非表示*/
 .mobile.footer {
   position: relative;
-  /*画面マスク. マスクをクリックするとdrawerを閉じる*/
-  /*中身*/
+  /* モーダル表示時の画面マスク */
   /*チェックが入ったらもろもろ表示*/
 }
 
@@ -345,9 +348,9 @@ header #nav-bar {
   transition: 0.3s ease-in-out;
 }
 
-.mobile.footer #nav-list__menu,
-.mobile.footer #nav-list__reserve,
-.mobile.footer #nav-list__news {
+.mobile.footer .footer__menu,
+.mobile.footer .footer__reserve,
+.mobile.footer .footer__news {
   overflow: auto;
   position: fixed;
   top: 0;
@@ -355,14 +358,11 @@ header #nav-bar {
   z-index: 9999;
   /*最前面に持ってくるので,画面マスクより大きい値を設定*/
   width: 90%;
-  /*drawerメニューをタッチしても閉じないため,右側に隙間を作る（閉じるカバーを表示）*/
   max-width: 300px;
-  /*drawerメニューの最大幅.適宜調整*/
   height: 80vh;
   background: lightblue;
   -webkit-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;
-  /*drawerのアニメーション設定*/
   -webkit-transform: translateX(-105%);
   transform: translateX(-105%);
   /*初期状態では,window外の左側に配置して隠す*/
@@ -374,7 +374,7 @@ header #nav-bar {
   /*画面マスクを表示*/
 }
 
-.mobile.footer #nav-menu:checked ~ #nav-list__menu {
+.mobile.footer #nav-menu:checked ~ .footer__menu {
   -webkit-transform: translateX(0%);
   transform: translateX(0%);
   /*drawerを表示（右へスライド）*/
@@ -387,7 +387,7 @@ header #nav-bar {
   /*画面マスクを表示*/
 }
 
-.mobile.footer #nav-reserve:checked ~ #nav-list__reserve {
+.mobile.footer #nav-reserve:checked ~ .footer__reserve {
   -webkit-transform: translateX(0%);
   transform: translateX(0%);
   /*drawerを表示（右へスライド）*/
@@ -400,7 +400,7 @@ header #nav-bar {
   /*画面マスクを表示*/
 }
 
-.mobile.footer #nav-news:checked ~ #nav-list__news {
+.mobile.footer #nav-news:checked ~ .footer__news {
   -webkit-transform: translateX(0%);
   transform: translateX(0%);
   /*drawerを表示（右へスライド）*/

@@ -172,6 +172,10 @@ header {
   .odd {
     background: #fefcf9;
   }
+  &__line__icon {
+    width: auto;
+    height: 25px;
+  }
 }
 
 // ------------------ アクセス -----------------------------
@@ -243,15 +247,13 @@ header {
 }
 
 // ------------------- フッター ----------------------------
-/*チェックボックスは常に非表示*/
-
 .mobile.footer {
   position: relative;
   .nav-unshown {
     display: none;
   }
 
-  /*画面マスク. マスクをクリックするとdrawerを閉じる*/
+  /* モーダル表示時の画面マスク */
   #nav-menu-close,
   #nav-reserve-close,
   #nav-news-close {
@@ -265,22 +267,20 @@ header {
     background: rgba(0, 0, 0, 0.5);
     transition: 0.3s ease-in-out;
   }
-
-  /*中身*/
-  #nav-list__menu,
-  #nav-list__reserve,
-  #nav-list__news {
+  // モーダル本体
+  .footer__menu,
+  .footer__reserve,
+  .footer__news {
     overflow: auto;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 9999; /*最前面に持ってくるので,画面マスクより大きい値を設定*/
-    width: 90%; /*drawerメニューをタッチしても閉じないため,右側に隙間を作る（閉じるカバーを表示）*/
-    max-width: 300px; /*drawerメニューの最大幅.適宜調整*/
+    width: 90%;
+    max-width: 300px;
     height: 80vh;
     background: lightblue;
-    transition: 0.4s ease-in-out; /*drawerのアニメーション設定*/
-    -webkit-transform: translateX(-105%);
+    transition: 0.4s ease-in-out;    -webkit-transform: translateX(-105%);
     transform: translateX(-105%); /*初期状態では,window外の左側に配置して隠す*/
     padding: 30px;
   }
@@ -289,7 +289,7 @@ header {
   #nav-menu:checked ~ #nav-menu-close {
     display: block; /*画面マスクを表示*/
   }
-  #nav-menu:checked ~ #nav-list__menu {
+  #nav-menu:checked ~ .footer__menu {
     -webkit-transform: translateX(0%);
     transform: translateX(0%); /*drawerを表示（右へスライド）*/
     box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
@@ -298,7 +298,7 @@ header {
   #nav-reserve:checked ~ #nav-reserve-close {
     display: block; /*画面マスクを表示*/
   }
-  #nav-reserve:checked ~ #nav-list__reserve {
+  #nav-reserve:checked ~ .footer__reserve {
     -webkit-transform: translateX(0%);
     transform: translateX(0%); /*drawerを表示（右へスライド）*/
     box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
@@ -307,7 +307,7 @@ header {
   #nav-news:checked ~ #nav-news-close {
     display: block; /*画面マスクを表示*/
   }
-  #nav-news:checked ~ #nav-list__news {
+  #nav-news:checked ~ .footer__news {
     -webkit-transform: translateX(0%);
     transform: translateX(0%); /*drawerを表示（右へスライド）*/
     box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
