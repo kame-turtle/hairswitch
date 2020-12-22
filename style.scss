@@ -1,0 +1,20 @@
+
+
+.card {
+  width: 300px;
+  height: 300px;
+  margin: 20px;
+  padding: 15px;
+  background-color: aquamarine;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+
+  &__body {
+    &--text {
+      letter-spacing: 0.5px;
+      margin-top: 15px;
+    }
+  }
+}

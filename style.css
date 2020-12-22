@@ -1,0 +1,23 @@
+.card {
+  width: 300px;
+  height: 300px;
+  margin: 20px;
+  padding: 15px;
+  background-color: aquamarine;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card__body--text {
+  letter-spacing: 0.5px;
+  margin-top: 15px;
+}
+/*# sourceMappingURL=style.css.map */
