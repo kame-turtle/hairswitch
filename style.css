@@ -1,7 +1,16 @@
-.card {
+.grid {
+  margin: 0 15px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 30px;
+}
+
+.grid .card {
   width: 300px;
   height: 300px;
-  margin: 20px;
+  margin: 15px auto;
   padding: 15px;
   background-color: aquamarine;
   display: -webkit-box;
@@ -16,7 +25,21 @@
           align-items: center;
 }
 
-.card__body--text {
+.grid .card__head--title {
+  font-weight: normal;
+  font-size: 20px;
+  margin-bottom: 15px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, transparent), color-stop(90%, #11439d));
+  background: linear-gradient(transparent 70%, #11439d 90%);
+}
+
+.grid .card__head--price {
+  font-size: 18px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, transparent), color-stop(90%, #059bcc));
+  background: linear-gradient(transparent 70%, #059bcc 90%);
+}
+
+.grid .card__body--text {
   letter-spacing: 0.5px;
   margin-top: 15px;
 }

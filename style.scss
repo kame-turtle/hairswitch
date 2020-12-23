@@ -1,20 +1,37 @@
+.grid {
+  margin: 0 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 30px;
+  .card {
+    width: 300px;
+    height: 300px;
+    margin: 15px auto;
+    padding: 15px;
+    background-color: aquamarine;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
 
+    &__head {
+      &--title {
+        font-weight: normal;
+        font-size: 20px;
+        margin-bottom: 15px;
+        background: linear-gradient(transparent 70%, #11439d 90%);
+      }
+      &--price {
+        font-size: 18px;
+        background: linear-gradient(transparent 70%, #059bcc 90%);
+      }
+    }
 
-.card {
-  width: 300px;
-  height: 300px;
-  margin: 20px;
-  padding: 15px;
-  background-color: aquamarine;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-
-  &__body {
-    &--text {
-      letter-spacing: 0.5px;
-      margin-top: 15px;
+    &__body {
+      &--text {
+        letter-spacing: 0.5px;
+        margin-top: 15px;
+      }
     }
   }
 }
