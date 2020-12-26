@@ -1,18 +1,66 @@
+body {
+  background-color: aliceblue;
+}
+
+.title {
+  border-radius: 10px;
+  background-color: #06267c;
+  color: aliceblue;
+  padding: 20px 50px;
+  position: relative;
+  width: 400px;
+  height: 120px;
+  margin: 0 auto 80px;
+}
+
+.title::before, .title::after {
+  content: '';
+  position: absolute;
+  -webkit-transform: rotate(-35deg);
+          transform: rotate(-35deg);
+  width: 90px;
+  height: 30px;
+  background-color: aliceblue;
+  z-index: 1;
+}
+
+.title::before {
+  top: -10px;
+  left: -30px;
+  border-bottom: 1px solid gray;
+}
+
+.title::after {
+  bottom: -10px;
+  right: -30px;
+  border-top: 1px solid gray;
+}
+
+.title__main {
+  font-size: 28px;
+  font-weight: normal;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.title__sub {
+  font-size: 20px;
+  font-weight: normal;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
 .grid {
-  margin: 0 15px;
+  margin: 0 30px 180px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 30px;
+  grid-gap: 50px;
 }
 
 .grid .card {
-  width: 300px;
-  height: 300px;
-  margin: 15px auto;
-  padding: 15px;
-  background-color: aquamarine;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -33,7 +81,7 @@
   background: linear-gradient(transparent 70%, #11439d 90%);
 }
 
-.grid .card__head--price {
+.grid .card__head--desc {
   font-size: 18px;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, transparent), color-stop(90%, #059bcc));
   background: linear-gradient(transparent 70%, #059bcc 90%);
